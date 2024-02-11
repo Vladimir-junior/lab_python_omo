@@ -1,18 +1,11 @@
-from random import choice, randint
-import string
+def two_list_to_dict(arr_1: list, arr_2: list) -> dict:
+    return dict(zip(arr_1, arr_2))
 
-def dict_connect(n):
-    list1 = []
-    list2 = []
-    for i in range(n):
-        list1.append(choice(string.ascii_letters))
-    for j in range(n):
-        list2.append(randint(1, 100))
-    result_dict = dict(zip(list1, list2))
+def main():
+    arr_1 = [1, 2, 3, 4, 5]
+    arr_2 = ['a', 'b', 'c', 'd', 'e']
+    print(two_list_to_dict(arr_1, arr_2))
 
-    return result_dict
+if __name__ == '__main__':
+    main()
 
-
-number = int(input("size:"))
-
-print(dict_connect(number))

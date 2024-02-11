@@ -1,12 +1,11 @@
-def world_examination(st):
-    l = st.split()
+def world_examination(st: str) -> list[str]:
     result = []
-    for i in l:
+    for i in st.split():
         if i == i[::-1]:
             result.append(i)
 
     return result
 
 
-offer = input()
-print(world_examination(offer))
+if __name__ == '__main__':
+    print(world_examination(input('Enter a string: ')))

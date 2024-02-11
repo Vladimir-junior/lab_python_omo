@@ -1,23 +1,16 @@
 from random import randint
 
-l = []
+def get_random_tuple(n: int) -> tuple:
+    return tuple(randint(1,100) for _ in range(n))
 
-for i in range(10):
-    l.append(randint(1, 100))
-
-tp = tuple(l)
-print(tp)
-print(max(tp))
-print(min(tp))
-
+def main():
+    l = get_random_tuple(10)
+    print(l)
+    print(max(l))
+    print(min(l))
 
 
-# способ 2
-# tp_1 = (34,76,32,5,76)
-# tp_2 = (78,53,4,98,23)
-# tp = tp_1 + tp_2
-# print(tp)
-# print(max(tp))
-# print(min(tp))
+if __name__ == '__main__':
+    main()
 
 

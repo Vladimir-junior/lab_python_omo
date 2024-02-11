@@ -1,30 +1,27 @@
-from random import randint
+def get_odd_product(arr: list) -> int:
+    result_product = 1
+    for i, el in enumerate(arr):
+        if i % 2 != 0:
+            result_product *= el
+    return result_product
 
-def list_operation(n):
-    l = []
-    p = 1
 
-    for i in range(n):
-        l.append(randint(1, 100))
+def remove_max_number(arr: list) -> list:
+    max_el = max(arr)
+    return [e for e in arr if e != max_el]
 
-    for index, j in enumerate(l):
-        if index % 2 != 0:
-            p *= j
 
-    max_element = max(l)
-    l.remove(max_element)
-    new_l = l[:]
-    new_l.sort(reverse=True)
-    max_element_3 = new_l[:3]
-    result = {
-        "list": l,
-        "proizvedenie": p,
-        "max_element": max_element,
-        "new_list": l,
-        "3_max_elements": max_element_3
-    }
+def get_max_3_numbers(arr: list) -> list:
+    return sorted(arr)[-3:]
 
-    return result
 
-number = int(input())
-print(list_operation(number))
+def main():
+    arr = [7,1,2,4,5,6,8,12]
+    print(get_odd_product(arr))
+    new_arr = remove_max_number(arr)
+    print(new_arr)
+    print(get_max_3_numbers(new_arr))
+
+
+if __name__ == '__main__':
+    main()
