@@ -8,4 +8,4 @@ def world_examination(st: str) -> list[str]:
 
 
 if __name__ == '__main__':
-    print(world_examination(input('Enter a string: ')))
+    print(world_examination(input('Введите строку: ')))
