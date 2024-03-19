@@ -9,10 +9,6 @@ def get_matrix(m: int, n: int) -> list:
     return matrix
 
 def sum_of_rows(matrix):
-    if not matrix:
-        print("Матрица пустая.")
-        return []
-
     sums = []
     for row in matrix:
         row_sum = sum(row)
@@ -24,11 +20,11 @@ def main():
     m = int(input("Введите количество строк матрицы: "))
     n = int(input("Введите количество столбцов матрицы: "))
     matrix = get_matrix(m, n)
+    sums = sum_of_rows(matrix)
     print("------------")
-    for row in matrix:
-        print(row)
+    for i, row in enumerate(matrix):
+        print(f'{row} = {sums[i]}')
     print("------------")
-    print(sum_of_rows(matrix))
 
 if __name__ == '__main__':
     main()

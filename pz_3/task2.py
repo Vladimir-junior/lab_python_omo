@@ -1,23 +1,26 @@
 class Stationery:
-    def __init__(self, title):
+    def __init__(self, title: str):
         self.title = title
 
-    def draw(self):
+    def draw(self) -> None:
         print("Запуск отрисовки")
 
 
 class Pen(Stationery):
-    def draw(self):
+    def draw(self) -> None:
+        super().draw()
         print("Отрисовка ручкой")
 
 
 class Pencil(Stationery):
-    def draw(self):
+    def draw(self) -> None:
+        super().draw()
         print("Отрисовка карандашом")
 
 
 class Handle(Stationery):
-    def draw(self):
+    def draw(self) -> None:
+        super().draw()
         print("Отрисовка маркером")
 
 

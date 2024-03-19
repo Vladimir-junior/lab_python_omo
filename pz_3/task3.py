@@ -1,46 +1,46 @@
 class Faculty:
-    def __init__(self, name):
+    def __init__(self, name: str):
         self.name = name
 
-    def get_name(self):
+    def get_name(self) -> str:
         return self.name
 
-    def rename_faculty(self, name):
+    def set_name(self, name: str) -> None:
         self.name = name
 
 
 class Student:
-    def __init__(self, full_name, birth_year, result_exam):
+    def __init__(self, full_name: str, birth_year: int, result_exam: list[int]):
         self.full_name = full_name
         self.birth_year = birth_year
         self.result_exam = result_exam
 
-    def get_full_name(self):
+    def get_full_name(self) -> str:
         return self.full_name
 
-    def rename_full_name(self, full_name):
+    def set_full_name(self, full_name: str) -> None:
         self.full_name = full_name
 
-    def get_birth_year(self):
+    def get_birth_year(self) -> int:
         return self.birth_year
 
-    def rename_birth_year(self, birth_year):
+    def set_birth_year(self, birth_year: int) -> None:
         self.birth_year = birth_year
 
-    def get_exam_scores(self):
+    def get_exam_scores(self) -> list[int]:
         return self.result_exam
 
-    def rename_exam_scores(self, result_exam):
+    def set_exam_scores(self, result_exam: list[int]) -> None:
         self.result_exam = result_exam
 
-    def average_exam_score(self):
+    def average_exam_score(self) -> float:
         return sum(self.result_exam) / len(self.result_exam)
 
 
 def main():
     faculty = Faculty("Факультет Компьютерных Систем и Сетей")
 
-    faculty.rename_faculty("Факультета Информационной Безопасности")
+    faculty.set_name("Факультета Информационной Безопасности")
 
     students_info = [
         {"full_name": "Борисенко Владимир Валерьевич", "birth_year": 2005, "result_scores": [5, 9, 7]},
